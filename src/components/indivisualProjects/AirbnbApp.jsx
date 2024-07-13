@@ -6,10 +6,8 @@ import { PiGithubLogo } from 'react-icons/pi';
 import { FaArrowUpRightFromSquare } from 'react-icons/fa6';
 
 import { motion } from 'framer-motion';
-import { useNavigate } from 'react-router-dom';
 
 const AirbnbApp = () => {
-  const navigate = useNavigate();
   return (
     <>
       <div className='sm:mx-[14%] mx-[6%] mt-[27%] sm:mt-[10%] '>
@@ -23,7 +21,6 @@ const AirbnbApp = () => {
           transition: { duration: 0.1 },
         }}
         className='flex sm:mx-[14%] mx-[6%] items-center mt-8 relative'
-        onClick={navigate('https://resplendent-flan-f21653.netlify.app')}
       >
         <div className='sm:block flex justify-center items-center flex-col'>
           <img
@@ -36,7 +33,7 @@ const AirbnbApp = () => {
               React, CSS3
             </strong>
           </p>
-          <p className='sm:hidden text-[1rem] text-center text-fuchsia-100 flex mt-7 font-vollkorn tracking-wide'>
+          <p className='sm:hidden text-[1rem] text-center text-cyan-700 flex mt-7 font-vollkorn tracking-wide'>
             UI copy of airbnb landing page with search functionality.
           </p>
         </div>

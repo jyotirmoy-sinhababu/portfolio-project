@@ -39,7 +39,7 @@ const TodoApp = () => {
               React, TypeScript, Redux-toolkit
             </strong>
           </p>
-          <p className='sm:hidden flex text-[1rem] text-fuchsia-100 text-center font-vollkorn tracking-wide'>
+          <p className='sm:hidden flex text-[1rem] text-cyan-700 text-center font-vollkorn tracking-wide'>
             Todo app is a CRUD app, where user can create a note, mark it as
             completed and can delete it.
           </p>

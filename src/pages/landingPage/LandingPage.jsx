@@ -1,3 +1,4 @@
+import Footer from '../../components/footer/Footer';
 import HeroComp from '../../components/heroComp/HeroComp';
 import Navbar from '../../components/nav/Navbar';
 import AboutPage from '../aboutPage/AboutPage';
@@ -12,6 +13,7 @@ const LandingPage = () => {
       <AboutPage />
       <MyProjects />
       <ContactPage />
+      <Footer />
     </div>
   );
 };

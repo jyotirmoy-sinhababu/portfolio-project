@@ -33,7 +33,7 @@ const InstaClone = () => {
               React, Chakra UI, Firebase, Redux-toolkit
             </strong>
           </p>
-          <p className='sm:hidden text-[1rem] text-center text-fuchsia-100 flex mt-7 font-vollkorn tracking-wide'>
+          <p className='sm:hidden text-[1rem] text-center text-cyan-700 flex mt-7 font-vollkorn tracking-wide'>
             Immerse yourself in a beautiful, intuitive design that mirrors the
             familiarity of Instagram while offering functionality like follow,
             comment, like, post and able to delete post.

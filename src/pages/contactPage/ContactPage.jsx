@@ -2,10 +2,21 @@ import { PiGithubLogo } from 'react-icons/pi';
 import { CiLinkedin } from 'react-icons/ci';
 import { SiFrontendmentor } from 'react-icons/si';
 import { AiOutlineThunderbolt } from 'react-icons/ai';
+import { MdEmail } from 'react-icons/md';
 
 import { Link } from 'react-router-dom';
+import { useState } from 'react';
 
 const ContactPage = () => {
+  const [isCopy, setIsCopy] = useState(false);
+  const copyFunction = async () => {
+    try {
+      await navigator.clipboard.writeText('jyotirmoysinhababu@gmail.com');
+      setIsCopy(true);
+    } catch (error) {
+      console.log(error);
+    }
+  };
   return (
     <>
       <div
@@ -47,6 +58,22 @@ const ContactPage = () => {
         >
           <SiFrontendmentor className='text-3xl text-teal-700 hover:text-teal-900' />
         </Link>
+        <button
+          onClick={() => {
+            copyFunction();
+          }}
+        >
+          <MdEmail className='text-3xl text-teal-700 hover:text-teal-900' />
+        </button>
+      </div>
+      <div className='flex justify-center items-center'>
+        {!isCopy ? (
+          <span></span>
+        ) : (
+          <span className='mt-[2%] text-3xl text-teal-700 hover:text-teal-900'>
+            Copied!
+          </span>
+        )}
       </div>
     </>
   );
