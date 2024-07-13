@@ -6,12 +6,14 @@ import { PiGithubLogo } from 'react-icons/pi';
 import { FaArrowUpRightFromSquare } from 'react-icons/fa6';
 
 import { motion } from 'framer-motion';
+import { useNavigate } from 'react-router-dom';
 
 const AirbnbApp = () => {
+  const navigate = useNavigate();
   return (
     <>
       <div className='sm:mx-[14%] mx-[6%] mt-[27%] sm:mt-[10%] '>
-        <p className='text-slate-400 sm:text-[31px] text-[23px] font-semibold font-abril '>
+        <p className='text-slate-600 sm:text-[31px] text-[23px] font-semibold font-abril '>
           Airbnb alike
         </p>
       </div>
@@ -21,6 +23,7 @@ const AirbnbApp = () => {
           transition: { duration: 0.1 },
         }}
         className='flex sm:mx-[14%] mx-[6%] items-center mt-8 relative'
+        onClick={navigate('https://resplendent-flan-f21653.netlify.app')}
       >
         <div className='sm:block flex justify-center items-center flex-col'>
           <img

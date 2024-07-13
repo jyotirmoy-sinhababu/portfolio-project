@@ -11,7 +11,7 @@ const TodoApp = () => {
   return (
     <>
       <div className='sm:mx-[21%] mx-[6%] mt-[27%] sm:mt-[10%] '>
-        <p className='text-slate-400 sm:text-[31px] text-[23px] font-semibold font-abril'>
+        <p className='text-slate-600 sm:text-[31px] text-[23px] font-semibold font-abril'>
           Todo app
         </p>
       </div>

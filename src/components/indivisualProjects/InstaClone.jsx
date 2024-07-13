@@ -11,7 +11,7 @@ const InstaClone = () => {
   return (
     <>
       <div className='sm:mx-[14%] mx-[6%] mt-[27%] sm:mt-[10%] '>
-        <p className='text-slate-400 sm:text-[31px] text-[23px] font-abril font-semibold'>
+        <p className='text-slate-600 sm:text-[31px] text-[23px] font-abril font-semibold'>
           Instagram Clone
         </p>
       </div>
