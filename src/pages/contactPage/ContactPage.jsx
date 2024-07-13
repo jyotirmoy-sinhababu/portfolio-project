@@ -4,8 +4,8 @@ import { SiFrontendmentor } from 'react-icons/si';
 import { AiOutlineThunderbolt } from 'react-icons/ai';
 import { MdEmail } from 'react-icons/md';
 
-import { Link } from 'react-router-dom';
 import { useState } from 'react';
+import { Tooltip } from 'react-tooltip';
 
 const ContactPage = () => {
   const [isCopy, setIsCopy] = useState(false);
@@ -30,41 +30,46 @@ const ContactPage = () => {
       </div>
       <div className='flex justify-center flex-row bottom-11 gap-9 items-center sm:mt-[6%]'>
         {' '}
-        <Link
-          to='https://github.com/jyotirmoy-sinhababu?tab=repositories'
+        <a
+          href='https://github.com/jyotirmoy-sinhababu?tab=repositories'
           target='_blank'
           rel='noopener noreferrer'
+          id='github'
         >
           <PiGithubLogo className='text-3xl text-teal-700 hover:text-teal-900' />
-        </Link>
-        <Link
+        </a>
+        <a
           target='_blank'
-          to='https://www.linkedin.com/in/jyotirmoy-sinhababu-64b9a7212?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app'
+          href='https://www.linkedin.com/in/jyotirmoy-sinhababu-64b9a7212?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app'
           rel='noopener noreferrer'
+          id='linkedin'
         >
           <CiLinkedin className='text-3xl text-teal-700 hover:text-teal-900' />
-        </Link>
-        <Link
-          to='https://fueler.io/jjoy'
+        </a>
+        <a
+          href='https://fueler.io/jjoy'
           target='_blank'
           className='flex text-xl text-teal-600'
+          id='fueler'
         >
           <AiOutlineThunderbolt className='text-3xl text-teal-700 hover:text-teal-900' />
-        </Link>
-        <Link
-          to='https://www.frontendmentor.io/profile/jyotirmoy-sinhababu'
+        </a>
+        <a
+          href='https://www.frontendmentor.io/profile/jyotirmoy-sinhababu'
           target='_blank'
           className='flex text-xl text-teal-600'
+          id='mentor'
         >
           <SiFrontendmentor className='text-3xl text-teal-700 hover:text-teal-900' />
-        </Link>
-        <button
+        </a>
+        <a
           onClick={() => {
             copyFunction();
           }}
+          id='mail'
         >
           <MdEmail className='text-3xl text-teal-700 hover:text-teal-900' />
-        </button>
+        </a>
       </div>
       <div className='flex justify-center items-center'>
         {!isCopy ? (
@@ -75,6 +80,11 @@ const ContactPage = () => {
           </span>
         )}
       </div>
+      <Tooltip anchorSelect='#github'>Github</Tooltip>
+      <Tooltip anchorSelect='#linkedin'>Linkedin</Tooltip>
+      <Tooltip anchorSelect='#fueler'>Fueler</Tooltip>
+      <Tooltip anchorSelect='#mentor'>Frontend Mentor</Tooltip>{' '}
+      <Tooltip anchorSelect='#mail'>Mail</Tooltip>{' '}
     </>
   );
 };
